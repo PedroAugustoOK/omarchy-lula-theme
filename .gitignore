@@ -1,6 +1,3 @@
-# Editor / OS noise — the theme itself needs no build artifacts.
-*~
-*.bak
-*.swp
+__pycache__/
+*.py[cod]
 .DS_Store
-Thumbs.db

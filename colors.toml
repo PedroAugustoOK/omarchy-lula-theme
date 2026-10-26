@@ -1,17 +1,16 @@
 # Lula — a dark-red Omarchy theme.
 # Near-black wine-tinted surfaces, red accent, warm readable text.
-# All 26 canonical keys are explicit (no reliance on derived floors).
 
 mode = "dark"
 
 accent = "#E63950"
 selection = "#4A1E2A"
-muted = "#8A757D"
+muted = "#8C7880"
 
 background = "#0B0A0C"
 dark_background = "#080708"
 darker_background = "#050404"
-lighter_background = "#21171C"
+lighter_background = "#181014"
 
 foreground = "#F2E8EB"
 dark_foreground = "#B7A2A9"
@@ -25,7 +24,7 @@ green = "#8FC38A"
 cyan = "#6EC2C4"
 blue = "#7AA5D6"
 magenta = "#C48AC9"
-brown = "#96604A"
+brown = "#9F6E5A"
 
 bright_red = "#FF5C74"
 bright_yellow = "#EFC27E"
