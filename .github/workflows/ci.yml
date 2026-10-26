@@ -1,0 +1,25 @@
+name: Theme checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Palette, contrast and published assets
+        run: python3 scripts/check-theme.py .
+      - name: Validator regression checks
+        run: python3 -m unittest discover -s tests -v
+      - name: Check every shell script
+        run: find scripts -name '*.sh' -print0 | xargs -0 -n 1 bash -n
+      - name: Check generated palette documentation
+        run: |
+          python3 scripts/check-theme.py . --write-report
+          git diff --exit-code -- docs/PALETTE.md

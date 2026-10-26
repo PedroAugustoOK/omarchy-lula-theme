@@ -3,12 +3,16 @@
 # Usage: ./scripts/make-preview.sh <theme-dir> "<theme name>" <output>
 # Example: ./scripts/make-preview.sh . "Lula" preview.png
 set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/palette.sh"
 
+if (( $# != 3 )); then
+  echo "Usage: $0 THEME_DIR NAME OUTPUT" >&2
+  exit 2
+fi
 theme_dir=$1
 name=$2
 output=$3
 
-color() { omarchy-theme-color "$1" --file "$theme_dir/colors.toml"; }
 rgba() {
   local hex=${1#\#} alpha=$2
   printf 'rgba(%d,%d,%d,%s)' "0x${hex:0:2}" "0x${hex:2:2}" "0x${hex:4:2}" "$alpha"
