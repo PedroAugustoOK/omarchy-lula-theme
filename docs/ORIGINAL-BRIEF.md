@@ -3,7 +3,7 @@
 > Prompt reescrito (2026-10-19) a partir do primeiro prompt do projeto Lula,
 > com tudo que foi aprendido ao construir, auditar e publicar o tema dark.
 > Padrões verificados no sistema em: RESEARCH.md (fonte da verdade,
-> incluindo §11 pós-4.0.5). Última versão testada do Omarchy: **4.0.5-1**.
+> incluindo §12 pós-4.0.6). Última versão testada do Omarchy: **4.0.6-1**.
 
 ---
 
@@ -115,11 +115,11 @@ não geram aviso (docs).
    thumbnails do switcher.
 5. `omarchy theme current` exibe o nome; `omarchy theme list` contém o tema;
    `omarchy dev theme-preview <tema>` renderiza a paleta.
-6. Você JÁ PODE romper a sessão do usuário durante testes, porque sempre:
-   - salvar antes: tema ativo + background atual
-     (`~/.local/state/omarchy/current/…`, `omarchy theme bg current`);
-   - restaurar ao final; pedir aprovação antes de passos destrutivos
-     (sudo, remoção, re-clonar).
+6. Não interrompa a sessão de trabalho do usuário durante testes. Prefira uma
+   máquina de teste ou um ambiente descartável. Não altere o tema ou wallpaper
+   ativo nem execute ações com `sudo`, remoção ou reclone sem autorização
+   explícita; quando a validação exigir uma dessas ações, explique o impacto e
+   peça autorização antes de prosseguir.
 7. Novo lugar no sistema: Plymouth é opcional e máquina-local
    (`omarchy-plymouth-set-by-theme <slug>`, sudo, revertível); não mexer
    a não ser a pedido.
