@@ -1,10 +1,10 @@
 # Lula
 
-![Lula theme preview](preview.png)
+A dark Omarchy theme with wine-black surfaces, warm text and a restrained red accent.
 
-A dark Omarchy theme with wine-black surfaces, warm text and a focused red accent. The preview is palette artwork, not a desktop screenshot.
+![Lula preview](preview.png)
 
-[**Lula Light**](https://github.com/PedroAugustoOK/omarchy-lula-light-theme) is the warm-paper variant.
+Its light sibling is [Lula Light](https://github.com/PedroAugustoOK/omarchy-lula-light-theme).
 
 ## Install
 
@@ -13,18 +13,15 @@ omarchy theme install https://github.com/PedroAugustoOK/omarchy-lula-theme
 omarchy theme bg next
 ```
 
-Installation applies the theme. The second command cycles its three static backgrounds.
+The first command installs and applies the theme. The second cycles through its wallpapers.
 
-`colors.toml` is the palette source; Omarchy generates application configurations from its templates. The repository does not ship Lua, terminal configuration files or `vscode.json`.
+## Included
 
-Reapply, update, refresh after an Omarchy upgrade, or remove the theme with `omarchy theme set lula`, `omarchy theme update`, `omarchy theme refresh` and `omarchy theme remove lula`.
-
-- [Palette and contrast](docs/PALETTE.md)
-- [Development and asset tooling](docs/DEVELOPMENT.md)
-- [Omarchy research](docs/RESEARCH.md)
-- [Changelog](CHANGELOG.md)
-- [License](LICENSE)
+- `colors.toml` — the theme palette.
+- `backgrounds/` — the included wallpapers.
+- Root-level appearance files for Omarchy and the supported applications.
+- `preview.png` — theme artwork.
 
 ## License
 
-MIT.
+MIT. See [LICENSE](LICENSE).
